@@ -10,15 +10,6 @@ use App\Repositories\Contracts\ProductRepositoryInterface;
  */
 class ProductRepository implements ProductRepositoryInterface
 {
-    /**
-     * @return string
-     *  Return the model
-     */
-    public function model()
-    {
-        return Product::class;
-    }
-
     public function all()
     {
         return Product::all();
@@ -27,5 +18,14 @@ class ProductRepository implements ProductRepositoryInterface
     public function find($id)
     {
         return Product::find($id);
+    }
+
+    /**
+     * @return string
+     *  Return the model
+     */
+    public function model()
+    {
+        return Product::class;
     }
 }

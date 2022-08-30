@@ -20,8 +20,7 @@ class ProductRepositoryController extends Controller
      */
     public function index()
     {
-        $products = $this->productRepository->all();
-        return $products;
+        return $this->productRepository->all();
     }
 
     /**
@@ -32,7 +31,6 @@ class ProductRepositoryController extends Controller
      */
     public function show($id)
     {
-        $product = $this->productRepository->find($id);
-        return $product;
+        return $this->productRepository->find($id);
     }
 }
